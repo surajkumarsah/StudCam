@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="30dp"
+        android:layout_margin="20dp"
+        android:src="@drawable/ic_archive_black_24dp"
+        />
+
+    <TextView
+        android:id="@+id/text_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image_view"
+        android:text=""
+        android:textAlignment="center"
+        android:maxLines="6"
+        android:layout_margin="10dp"
+        android:textSize="18dp"
+        />
+
+    <Button
+        android:id="@+id/capture_image"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Capture Image"
+        android:textAllCaps="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:background="@drawable/button_xml"
+        android:layout_above="@+id/detect_text"
+        android:textColor="@color/white"
+        />
+
+
+    <Button
+        android:id="@+id/detect_text"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Detect Text"
+        android:textAllCaps="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:background="@drawable/button_xml"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:padding="15dp"
+        />
+
+
+</RelativeLayout>

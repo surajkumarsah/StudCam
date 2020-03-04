@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1025750503074",
+    "firebase_url": "https://studcam-4723a.firebaseio.com",
+    "project_id": "studcam-4723a",
+    "storage_bucket": "studcam-4723a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025750503074:android:2503473e6d20be1d4011fb",
+        "android_client_info": {
+          "package_name": "com.example.studcam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025750503074-9olvottu779rmq06hqapacsa2rm1q152.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXyYof19Ffw4SX3XEkorIlgpZYm9kRd5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025750503074-9olvottu779rmq06hqapacsa2rm1q152.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
