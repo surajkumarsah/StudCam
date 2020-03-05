@@ -19,7 +19,7 @@ public class Splash_Activity extends AppCompatActivity {
                 try
                 {
                     sleep(3000);
-                    Intent intent = new Intent(getApplicationContext(), ChooseExam_Activity.class);
+                    Intent intent = new Intent(getApplicationContext(), AppIntro_Activity.class);
                     startActivity(intent);
                     finish();
                 }

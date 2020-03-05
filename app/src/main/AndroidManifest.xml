@@ -15,7 +15,12 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme">
-        <activity android:name=".ChooseExam_Activity"></activity>
+        <activity android:name=".GmailLogin_Activity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".PhoneOtp_Activity" />
+        <activity android:name=".PhoneReg_Activity" />
+        <activity android:name=".AppIntro_Activity" />
+        <activity android:name=".ChooseExam_Activity" />
         <activity android:name=".MainActivity">
             <meta-data
                 android:name="com.google.firebase.ml.vision.DEPENDENCIES"

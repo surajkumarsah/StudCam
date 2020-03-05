@@ -13,7 +13,9 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.studcam.Prevalent.Prevalent;
 import com.example.studcam.ViewHolder.ExamViewHolder;
 import com.example.studcam.model.ExamView;
@@ -26,15 +28,14 @@ import com.squareup.picasso.Picasso;
 
 import io.paperdb.Paper;
 
-public class ChooseExam_Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
-
+public class ChooseExam_Activity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener
+{
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
-
     private DatabaseReference GalleryRef;
     private RecyclerView recyclerView;
     String data;
+    private LottieAnimationView progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +57,12 @@ public class ChooseExam_Activity extends AppCompatActivity implements Navigation
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(gridLayoutManager);
 
+        progressBar = (LottieAnimationView) findViewById(R.id.progressBar);
+
+        progressBar.setVisibility(View.VISIBLE);
+
     }
 
-//
 //    @Override
 //    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 //        return false;
@@ -83,6 +87,7 @@ public class ChooseExam_Activity extends AppCompatActivity implements Navigation
                 examViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        progressBar.setVisibility(View.GONE);
                         Intent intent = new Intent(ChooseExam_Activity.this,MainActivity.class);
                         startActivity(intent);
                     }

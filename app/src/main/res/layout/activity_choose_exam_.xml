@@ -6,11 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".ChooseExam_Activity">
 
-        <androidx.drawerlayout.widget.DrawerLayout
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressBar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:outlineAmbientShadowColor="@color/black"-->
+<!--        android:outlineSpotShadowColor="@color/blue1"-->
+<!--        android:visibility="gone"-->
+<!--        />-->
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/progressBar"
+        android:layout_centerVertical="true"
+        app:lottie_loop="true"
+        android:layout_centerHorizontal="true"
+        app:lottie_fileName="triangle_loading_json.json"
+        app:lottie_autoPlay="true"
+        android:visibility="gone"
+        />
+
+
+    <androidx.drawerlayout.widget.DrawerLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/drawer"
             >
+
 
             <TextView
                 android:layout_width="wrap_content"

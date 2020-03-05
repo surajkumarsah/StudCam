@@ -7,11 +7,24 @@
     android:background="@color/white"
     tools:context=".Splash_Activity">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/animation"
+        android:layout_centerVertical="true"
+        app:lottie_loop="true"
+        android:layout_centerHorizontal="true"
+        app:lottie_fileName="triangle_loading_json.json"
+        app:lottie_autoPlay="true"
+        />
+
     <LinearLayout
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
     <TextView
@@ -34,33 +47,34 @@
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/red"
+
         />
 
     </LinearLayout>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Powered by HHS"
-        android:layout_centerVertical="true"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="@color/black1"
-        android:layout_above="@+id/dot"
-        android:layout_centerHorizontal="true"
-        />
-    <TextView
-        android:id="@+id/dot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="..."
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:textColor="@color/red"
-        android:layout_alignParentBottom="true"
-        />
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Powered by HHS"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:textSize="15sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/black1"-->
+<!--        android:layout_above="@+id/text"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        />-->
+<!--    <TextView-->
+<!--        android:id="@+id/dot"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="..."-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:textSize="50sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textColor="@color/red"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        />-->
 
 </RelativeLayout>
