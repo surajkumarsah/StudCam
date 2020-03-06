@@ -30,10 +30,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stud"
+        android:text="Sawal"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/black"
         />
@@ -41,10 +41,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cam"
+        android:text="Jabav"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/red"
 

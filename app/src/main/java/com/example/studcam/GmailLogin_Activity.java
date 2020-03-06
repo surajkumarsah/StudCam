@@ -32,7 +32,7 @@ public class GmailLogin_Activity extends AppCompatActivity {
 
     static final int GOOGLE_SIGN_IN = 123;
     FirebaseAuth mAuth;
-    Button btn_login, btn_logout;
+    Button btn_login, btn_logout, btn_phone_login;
     TextView text;
     ImageView image;
     ProgressBar progressBar;
@@ -45,6 +45,8 @@ public class GmailLogin_Activity extends AppCompatActivity {
 
         btn_login = findViewById(R.id.login);
         btn_logout = findViewById(R.id.logout);
+        btn_phone_login = findViewById(R.id.phonelogin);
+
         text = findViewById(R.id.text);
         image = findViewById(R.id.image);
         progressBar = findViewById(R.id.progress_circular);
@@ -68,6 +70,14 @@ public class GmailLogin_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Logout();
+            }
+        });
+
+        btn_phone_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GmailLogin_Activity.this, PhoneReg_Activity.class);
+                startActivity(intent);
             }
         });
 
@@ -143,6 +153,27 @@ public class GmailLogin_Activity extends AppCompatActivity {
             Picasso.get().load(photo).into(image);
             btn_logout.setVisibility(View.VISIBLE);
             btn_login.setVisibility(View.INVISIBLE);
+
+            Thread thread = new Thread()
+            {
+
+                @Override
+                public void run() {
+                    try
+                    {
+                        sleep(8000);
+                        Intent intent = new Intent(getApplicationContext(), ChooseExam_Activity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                    catch (InterruptedException e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            thread.start();
+
         } else {
             text.setText(getString(R.string.firebase_login));
             //Picasso.with(GmailLogin_Activity.this).load(R.drawable.ic_firebase_logo).into(image);

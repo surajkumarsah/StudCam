@@ -41,7 +41,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="88dp"
-        android:background="#00e5ff"
+        android:background="@drawable/round_bg1"
         android:text="Send Otp"
         android:textAllCaps="true"
         android:textColor="@color/white"
@@ -57,12 +57,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
-        android:background="#00e5ff"
+        android:background="@drawable/round_bg1"
         android:text="Google  Login"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
         />
+    <!--#00e5ff-->
 
 </RelativeLayout>

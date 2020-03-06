@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">StudCam</string>
+    <string name="app_name">SawalJabav</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="firebase_login">Firebase Login</string>

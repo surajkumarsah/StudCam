@@ -19,6 +19,9 @@
         <!-- Customize your theme here. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue1</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
 
