@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -27,6 +28,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.squareup.picasso.Picasso;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class GmailLogin_Activity extends AppCompatActivity {
 
 
@@ -34,8 +37,8 @@ public class GmailLogin_Activity extends AppCompatActivity {
     FirebaseAuth mAuth;
     Button btn_login, btn_logout, btn_phone_login;
     TextView text;
-    ImageView image;
-    ProgressBar progressBar;
+    CircleImageView image;
+    LottieAnimationView progressBar;
     GoogleSignInClient mGoogleSignInClient;
 
     @Override
@@ -48,7 +51,7 @@ public class GmailLogin_Activity extends AppCompatActivity {
         btn_phone_login = findViewById(R.id.phonelogin);
 
         text = findViewById(R.id.text);
-        image = findViewById(R.id.image);
+        image = (CircleImageView) findViewById(R.id.image);
         progressBar = findViewById(R.id.progress_circular);
 
         mAuth = FirebaseAuth.getInstance();
@@ -145,9 +148,11 @@ public class GmailLogin_Activity extends AppCompatActivity {
             String name = user.getDisplayName();
             String email = user.getEmail();
             String photo = String.valueOf(user.getPhotoUrl());
+            String mobno = user.getPhoneNumber();
 
-            text.append("Info : \n");
+            text.append(" Info : \n");
             text.append(name + "\n");
+            //text.append(mobno + "\n");
             text.append(email);
 
             Picasso.get().load(photo).into(image);
@@ -176,7 +181,6 @@ public class GmailLogin_Activity extends AppCompatActivity {
 
         } else {
             text.setText(getString(R.string.firebase_login));
-            //Picasso.with(GmailLogin_Activity.this).load(R.drawable.ic_firebase_logo).into(image);
             Picasso.get().load(R.drawable.ic_firebase_logo).into(image);
             btn_logout.setVisibility(View.INVISIBLE);
             btn_login.setVisibility(View.VISIBLE);

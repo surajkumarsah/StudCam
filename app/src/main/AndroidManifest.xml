@@ -15,8 +15,11 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme">
-        <activity android:name=".GmailLogin_Activity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".SelectGradExam_Activity"></activity>
+        <activity android:name=".SelectMainExam_Activity" />
+        <activity
+            android:name=".GmailLogin_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PhoneOtp_Activity" />
         <activity android:name=".PhoneReg_Activity" />
         <activity android:name=".AppIntro_Activity" />

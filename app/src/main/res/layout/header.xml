@@ -7,7 +7,8 @@
     android:background="@color/blue"
     >
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_image"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:src="@drawable/ic_launcher_foreground"
@@ -15,6 +16,7 @@
         />
 
     <TextView
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="StudCam"
@@ -32,6 +34,7 @@
         />
 
     <TextView
+        android:id="@+id/user_mail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Surajkumarsah165@gmail.com"

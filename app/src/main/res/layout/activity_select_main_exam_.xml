@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectMainExam_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select an Exam"
+                android:textSize="15sp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/blue"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <!--            <com.airbnb.lottie.LottieAnimationView-->
+                <!--                android:layout_width="100dp"-->
+                <!--                android:layout_height="100dp"-->
+                <!--                android:id="@+id/animation1"-->
+                <!--                app:lottie_loop="true"-->
+                <!--                android:layout_marginTop="3dp"-->
+                <!--                android:layout_gravity="center"-->
+                <!--                app:lottie_fileName="enggineerjson.json"-->
+                <!--                app:lottie_autoPlay="true"-->
+                <!--                />-->
+
+
+                <!--                <com.airbnb.lottie.LottieAnimationView-->
+                <!--                    android:layout_width="100dp"-->
+                <!--                    android:layout_height="100dp"-->
+                <!--                    android:id="@+id/animation2"-->
+                <!--                    app:lottie_loop="true"-->
+                <!--                    android:layout_marginTop="3dp"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    app:lottie_fileName="triangle_loading_json.json"-->
+                <!--                    app:lottie_autoPlay="true"-->
+                <!--                    />-->
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/animation"
+                    app:lottie_loop="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_gravity="center"
+                    app:lottie_fileName="doctorjson.json"
+                    app:lottie_autoPlay="true"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/graduation"
+                android:padding="15dp"
+                android:gravity="center"
+                android:background="@drawable/inputbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="3"
+                    android:columnCount="3">
+
+                <Button
+                    android:id="@+id/engg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:text="Engineering"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/medical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Medical"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/bsc_sc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="B.Sc(science)"
+                        android:textAllCaps="false"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/bsc_Comm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="B.Sc(Commerce)"
+                        android:textAllCaps="false"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                <Button
+                    android:id="@+id/ba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="BA(Arts)"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/bba"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="BBA"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                    android:id="@+id/bed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="B.Ed"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_bg1"/>
+
+                <Button
+                    android:id="@+id/llb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="LLB"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_bg1"/>
+
+                <Button
+                    android:id="@+id/others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Others"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_bg1"/>
+                </GridLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

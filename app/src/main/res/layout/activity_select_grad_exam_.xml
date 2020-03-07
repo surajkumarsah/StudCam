@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectGradExam_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select an Exam"
+                android:textSize="15sp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/blue"
+                />
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/animation"
+                app:lottie_loop="true"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"
+                app:lottie_fileName="profilejson.json"
+                app:lottie_autoPlay="true"
+                />
+
+
+
+
+            <!--Engineering Type Layout-->
+
+            <RelativeLayout
+                android:id="@+id/engg_exam_layout"
+                android:padding="15dp"
+                android:gravity="center"
+                android:background="@drawable/inputbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="3"
+                    android:columnCount="4">
+
+                    <Button
+                        android:id="@+id/ce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:textAllCaps="false"
+                        android:text="CE"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/ec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="EC"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/ee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="EE"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="ME"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/cs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="CS"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/it"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="IT"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/engg_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Others"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                </GridLayout>
+            </RelativeLayout>
+<!--Engineering Type -->
+            <RelativeLayout
+                android:id="@+id/engg_others_layout"
+                android:padding="15dp"
+                android:gravity="center"
+                android:background="@drawable/inputbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="10"
+                    android:columnCount="4">
+
+                    <Button
+                        android:id="@+id/ae"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textAllCaps="false"
+                        android:text="AE"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/ag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="AG"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/ar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="AR"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/bm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="BM"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="BT"
+                        android:layout_marginBottom="5dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/ch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="CH"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/cy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="CY"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/ey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:textAllCaps="false"
+                        android:text="EY"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/gg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="GG"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="IN"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/ma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="MA"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/mn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="MN"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/mt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="MT"
+                        android:textAllCaps="false"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/pe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="PE"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/ph"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:textAllCaps="false"
+                        android:text="PH"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/pi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="PI"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/st"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="ST"
+                        android:textAllCaps="false"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/tf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="TF"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/xe_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XE-A"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/xe_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XE-B"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/xe_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XE-C"
+                        android:textAllCaps="false"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/xe_d"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XE-D"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/xe_e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XE-E"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/xe_f"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XE-F"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/xe_g"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XE-G"
+                        android:textAllCaps="false"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/xl_p"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XL-P"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/xl_q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:textAllCaps="false"
+                        android:text="XL_Q"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/xl_r"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="XL-R"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/xl_s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XL-S"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/xl_t"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XL-T"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/xe_u"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="XE-U"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/others_exam1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Others"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                </GridLayout>
+            </RelativeLayout>
+            <!--Engineering Type -->
+
+            <!--Medical Exam-->
+
+<!--Medical Exam-->
+
+
+            <RelativeLayout
+                android:id="@+id/medical_exam_layout"
+                android:padding="15dp"
+                android:gravity="center"
+                android:background="@drawable/inputbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="1"
+                    android:columnCount="2">
+
+                    <Button
+                        android:id="@+id/md"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:textAllCaps="false"
+                        android:text="MD"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/ms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="MS"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+                </GridLayout>
+            </RelativeLayout>
+            <!--Medical Exam-->
+
+            <!--Medical Type 1 Exam-->
+            <RelativeLayout
+                android:id="@+id/medical_exam_type1_layout"
+                android:padding="15dp"
+                android:gravity="center"
+                android:background="@drawable/inputbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="10"
+                    android:columnCount="2">
+
+                    <Button
+                        android:id="@+id/obst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Obstetrics &amp; Gynaecology"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/ortho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Orthopaedics"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/neur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Neurology &amp; Anaesthesiology"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/cardio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Cardiology"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/endo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Endocrinology"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/gynae"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Gynaecology"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/paediatric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Paediatric"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/psychi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:textAllCaps="false"
+                        android:text="Psychiatry"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/dermato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Dermatology"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Radio-Diagnosis"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/pathology"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Pathology"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/medical_type1_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Others"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+                </GridLayout>
+            </RelativeLayout>
+            <!--Medical Type 1 Exam-->
+
+
+            <RelativeLayout
+                android:id="@+id/medical_exam_type2_layout"
+                android:padding="15dp"
+                android:gravity="center"
+                android:background="@drawable/inputbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="10"
+                    android:columnCount="2">
+
+                    <Button
+                        android:id="@+id/paedia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Paediatric Surgery"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/psurgery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Plastic Surgery"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/cardio_thoracic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Cardio-thoracic surgery"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/uro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Urology"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/cardiac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Cardiac surgery"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/cosmestic_sur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Cosmetic surgery"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/ent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="ENT"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/ophtha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:textAllCaps="false"
+                        android:text="Ophthalmology"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/gynaecology"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Gynaecology"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/obste"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Obstetrics"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/orthopaedics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Orthopaedics"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/medical_type2_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Others"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+                </GridLayout>
+            </RelativeLayout>
+            <!--Medical Type2 Exam-->
+            <!--Medical Exam-->
+
+
+            <!--BSc Exam-->
+
+            <RelativeLayout
+                android:id="@+id/bsc_layout"
+                android:padding="15dp"
+                android:gravity="center"
+                android:background="@drawable/inputbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="10"
+                    android:columnCount="2">
+
+                    <Button
+                        android:id="@+id/bio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Biology"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/bioc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Biochemistry"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/botany"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Botany"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/chem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Chemistry"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/evs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Environmental Sc."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/math"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Mathematics"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/phy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Physics"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/zoo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="0dp"
+                        android:textAllCaps="false"
+                        android:text="Zoology"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/bsc_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Others"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                </GridLayout>
+            </RelativeLayout>
+            <!--BSc Exam-->
+
+            <!--BA Comm Exam-->
+
+            <RelativeLayout
+                android:id="@+id/ba_comm_layout"
+                android:padding="15dp"
+                android:gravity="center"
+                android:background="@drawable/inputbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="10"
+                    android:columnCount="2">
+
+                    <Button
+                        android:id="@+id/acco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Account"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Cost"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/stat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Statistics"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/manage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Manage"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/human"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Human"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/comp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Compute"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/economi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Economy"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/eng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="English"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/law"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Law"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/marketin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Marketin"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/finance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Finance"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/ba_comm_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Others"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                </GridLayout>
+            </RelativeLayout>
+            <!--BA Comm Exam-->
+
+
+
+            <!--BA Exam-->
+
+            <RelativeLayout
+                android:id="@+id/ba_layout"
+                android:padding="15dp"
+                android:gravity="center"
+                android:background="@drawable/inputbg"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="10"
+                    android:columnCount="2">
+
+                    <Button
+                        android:id="@+id/hist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="History"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/eco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Economics"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/geo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Geography"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/politsc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Political Sc."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/Socio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Sociology"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/philo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Philosophy"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                    <Button
+                        android:id="@+id/human_rt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Human Rt &amp; Gender St."
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/inform"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Informatics Practices"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+
+                    <Button
+                        android:id="@+id/ba_others"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textAllCaps="false"
+                        android:text="Others"
+                        android:textColor="@color/white"
+                        android:background="@drawable/round_bg1"/>
+
+                </GridLayout>
+            </RelativeLayout>
+            <!--BA Exam-->
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

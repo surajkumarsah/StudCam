@@ -7,6 +7,18 @@
     android:background="@drawable/backg"
     tools:context=".PhoneReg_Activity">
 
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/animation"
+        app:lottie_loop="true"
+        android:layout_margin="50dp"
+        app:lottie_fileName="minejson.json"
+        app:lottie_autoPlay="true"
+        />
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,6 +27,8 @@
         android:layout_marginBottom="229dp"
         android:orientation="horizontal"
         android:padding="15dp">
+
+
 
         <Spinner
             android:id="@+id/spinnerCountries"

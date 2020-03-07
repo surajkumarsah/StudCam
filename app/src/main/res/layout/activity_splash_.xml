@@ -14,7 +14,7 @@
         android:layout_centerVertical="true"
         app:lottie_loop="true"
         android:layout_centerHorizontal="true"
-        app:lottie_fileName="triangle_loading_json.json"
+        app:lottie_fileName="materialwave_loading_json.json"
         app:lottie_autoPlay="true"
         />
 

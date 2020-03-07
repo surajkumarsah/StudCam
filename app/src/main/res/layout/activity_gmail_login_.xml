@@ -7,7 +7,7 @@
     android:background="@drawable/backg"
     tools:context=".GmailLogin_Activity">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -15,6 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:src="@drawable/ic_firebase_logo"/>
+
 
     <TextView
         android:id="@+id/text"
@@ -28,15 +29,30 @@
         android:layout_below="@+id/image"
         android:gravity="center"/>
 
-    <ProgressBar
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progress_circular"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/text"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:outlineSpotShadowColor="@color/white"-->
+<!--        />-->
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:id="@+id/progress_circular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text"
-        android:layout_marginTop="20dp"
+        app:lottie_loop="true"
         android:layout_centerHorizontal="true"
-        android:outlineSpotShadowColor="@color/white"
+        android:layout_centerVertical="true"
+        android:layout_margin="50dp"
+        app:lottie_fileName="trial_loading_json.json"
+        app:lottie_autoPlay="true"
         />
+
+
 
     <Button
         android:id="@+id/login"
