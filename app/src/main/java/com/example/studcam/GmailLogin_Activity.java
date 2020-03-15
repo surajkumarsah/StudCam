@@ -150,7 +150,7 @@ public class GmailLogin_Activity extends AppCompatActivity {
             String photo = String.valueOf(user.getPhotoUrl());
             String mobno = user.getPhoneNumber();
 
-            text.append(" Info : \n");
+            text.append(" WELCOME \n");
             text.append(name + "\n");
             //text.append(mobno + "\n");
             text.append(email);

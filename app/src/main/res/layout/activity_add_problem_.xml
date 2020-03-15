@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddProblem_Activity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/problem_image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_photo_size_select_actual_black_24dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
+
+                <EditText
+                    android:id="@+id/prlm_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+                    android:inputType="textEmailAddress"
+                    android:textSize="15dp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            />
+
+
+            <Button
+                android:id="@+id/view_problem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Problem"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+
+
+</ScrollView>

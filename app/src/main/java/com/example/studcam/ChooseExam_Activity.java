@@ -9,19 +9,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.studcam.Prevalent.Prevalent;
+import com.example.studcam.Prevalent.Save1stPage;
 import com.example.studcam.ViewHolder.ExamViewHolder;
-import com.example.studcam.ViewHolder.TestViewHolder;
 import com.example.studcam.model.ExamView;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -48,15 +47,21 @@ public class ChooseExam_Activity extends AppCompatActivity implements Navigation
     FirebaseUser user;
     FirebaseAuth mAuth;
     private LottieAnimationView progressBar;
+    String examId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_exam_);
 
+        Paper.init(getApplicationContext());
+
         userName = (TextView) findViewById(R.id.user_name);
         userMail = (TextView) findViewById(R.id.user_mail);
         userImage = (CircleImageView) findViewById(R.id.user_image);
+
+        initMethod();
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -71,9 +76,7 @@ public class ChooseExam_Activity extends AppCompatActivity implements Navigation
 
 
         Paper.init(ChooseExam_Activity.this);
-//
-//        toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
@@ -89,14 +92,64 @@ public class ChooseExam_Activity extends AppCompatActivity implements Navigation
         recyclerView.setLayoutManager(gridLayoutManager);
         progressBar = (LottieAnimationView) findViewById(R.id.progressBar);
         progressBar.setVisibility(View.VISIBLE);
+    }
 
+    private void initMethod()
+    {
+        String data = Paper.book().read(Save1stPage.examId);
+
+        if (TextUtils.isEmpty(data))
+        {
+            return;
+        }
+        else {
+
+            if (data.equals("1st_5th")) {
+                Intent intent = new Intent(ChooseExam_Activity.this, OneToFifth_Activity.class);
+                intent.putExtra("course", "1st_5th");
+                startActivity(intent);
+                finish();
+            } else if (data.equals("6th_8th")) {
+
+                Intent intent = new Intent(ChooseExam_Activity.this, SixToEight_Activity.class);
+                intent.putExtra("course", "6th_8th");
+                startActivity(intent);
+                finish();
+            } else if (data.equals("9th_10th")) {
+
+                Intent intent = new Intent(ChooseExam_Activity.this, NineToTen.class);
+                intent.putExtra("course", "9th_10th");
+                startActivity(intent);
+                finish();
+
+            } else if (data.equals("11th_12th")) {
+                Intent intent = new Intent(ChooseExam_Activity.this, ElevenToTwelve_Activity.class);
+                intent.putExtra("course", "11th_12th");
+                startActivity(intent);
+                finish();
+
+            } else if (data.equals("graduation")) {
+                Intent intent = new Intent(ChooseExam_Activity.this, SelectHigherExam_Activity.class);
+                intent.putExtra("course", "graduation");
+                startActivity(intent);
+                finish();
+
+            } else if (data.equals("higher")) {
+                Intent intent = new Intent(ChooseExam_Activity.this, SelectHigherExam_Activity.class);
+                intent.putExtra("course", "higher");
+                startActivity(intent);
+                finish();
+
+            } else {
+                Intent intent = new Intent(ChooseExam_Activity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        }
 
     }
 
-//    @Override
-//    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-//        return false;
-//    }
 
     @Override
     protected void onStart()
@@ -126,42 +179,56 @@ public class ChooseExam_Activity extends AppCompatActivity implements Navigation
 
                         if (examView.getId().equals("1st_5th"))
                         {
-                            Intent intent = new Intent(ChooseExam_Activity.this,SelectMainExam_Activity.class);
+                            Paper.book().write(Save1stPage.examId, examView.getId());
+
+                            Intent intent = new Intent(ChooseExam_Activity.this,OneToFifth_Activity.class);
                             intent.putExtra("course",examView.getId());
                             startActivity(intent);
                         }
                         else if (examView.getId().equals("6th_8th"))
                         {
-                            Intent intent = new Intent(ChooseExam_Activity.this,SelectMainExam_Activity.class);
+                            Paper.book().write(Save1stPage.examId, examView.getId());
+
+                            Intent intent = new Intent(ChooseExam_Activity.this,SixToEight_Activity.class);
                             intent.putExtra("course",examView.getId());
                             startActivity(intent);
                         }
                         else if (examView.getId().equals("9th_10th"))
                         {
-                            Intent intent = new Intent(ChooseExam_Activity.this,SelectMainExam_Activity.class);
+                            Paper.book().write(Save1stPage.examId, examView.getId());
+
+                            Intent intent = new Intent(ChooseExam_Activity.this,NineToTen.class);
                             intent.putExtra("course",examView.getId());
                             startActivity(intent);
                         }
                         else if (examView.getId().equals("11th_12th"))
                         {
-                            Intent intent = new Intent(ChooseExam_Activity.this,SelectMainExam_Activity.class);
+                            Paper.book().write(Save1stPage.examId, examView.getId());
+
+                            Intent intent = new Intent(ChooseExam_Activity.this,ElevenToTwelve_Activity.class);
                             intent.putExtra("course",examView.getId());
                             startActivity(intent);
                         }
                         else if (examView.getId().equals("graduation"))
                         {
-                            Intent intent = new Intent(ChooseExam_Activity.this,SelectMainExam_Activity.class);
+                            Paper.book().write(Save1stPage.examId, examView.getId());
+
+                            Intent intent = new Intent(ChooseExam_Activity.this, SelectHigherExam_Activity.class);
                             intent.putExtra("course",examView.getId());
                             startActivity(intent);
                         }
                         else if (examView.getId().equals("higher"))
                         {
-                            Intent intent = new Intent(ChooseExam_Activity.this,SelectMainExam_Activity.class);
+                            Paper.book().write(Save1stPage.examId, examView.getId());
+
+                            Intent intent = new Intent(ChooseExam_Activity.this, SelectHigherExam_Activity.class);
                             intent.putExtra("course",examView.getId());
                             startActivity(intent);
                         }
                         else
                         {
+                            Paper.book().write(Save1stPage.examId, examView.getId());
+
                             Intent intent = new Intent(ChooseExam_Activity.this,MainActivity.class);
                             startActivity(intent);
                         }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectMainExam_Activity">
+    tools:context=".SelectHigherExam_Activity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -194,6 +194,18 @@
                     android:background="@drawable/round_bg1"/>
                 </GridLayout>
             </RelativeLayout>
+
+            <Button
+                android:id="@+id/add_Student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Students"
+                android:background="@drawable/round_bg1"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:padding="20dp"
+                />
 
 
         </LinearLayout>

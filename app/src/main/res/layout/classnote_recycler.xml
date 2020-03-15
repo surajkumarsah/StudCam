@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="300dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/problem_background"
+        >
+        <ImageView
+            android:id="@+id/prlm_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:layout_below="@+id/prlm_img"
+            />
+
+        <TextView
+            android:id="@+id/prlm_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:layout_below="@+id/prlm_img"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/intro_description_color"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prlm_date"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submitted by :"
+            android:layout_below="@+id/prlm_date"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/intro_description_color"
+            />
+
+
+        <TextView
+            android:id="@+id/prlb_submitted_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submitted by"
+            android:layout_below="@+id/prlm_date"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            android:textSize="15dp"
+            android:textColor="@color/black1"
+            />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

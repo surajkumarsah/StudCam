@@ -15,14 +15,21 @@
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme">
-        <activity android:name=".SelectGradExam_Activity"></activity>
-        <activity android:name=".SelectMainExam_Activity" />
+        <activity android:name=".HigherExamDetails_Activity"></activity>
+        <activity android:name=".AddProblem_Activity" />
+        <activity android:name=".ProblemViewRecycler_Activity" />
+        <activity android:name=".ElevenToTwelve_Activity" />
+        <activity android:name=".App_Intro_Activity" />
+        <activity android:name=".NineToTen" />
+        <activity android:name=".SixToEight_Activity" />
+        <activity android:name=".OneToFifth_Activity" />
+        <activity android:name=".SelectGradExam_Activity" />
+        <activity android:name=".SelectHigherExam_Activity" />
         <activity
             android:name=".GmailLogin_Activity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PhoneOtp_Activity" />
         <activity android:name=".PhoneReg_Activity" />
-        <activity android:name=".AppIntro_Activity" />
         <activity android:name=".ChooseExam_Activity" />
         <activity android:name=".MainActivity">
             <meta-data
