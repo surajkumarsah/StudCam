@@ -21,8 +21,11 @@ public class SelectGradExam_Activity extends AppCompatActivity {
     String subCode;
 
     int string_size;
-    String []enggSubjectCode = new String[] {"ce", "ec","ee", "me", "cs", "it"};
-    String []medicalSubjectCode = new String[] {"obst"};
+    String []enggSubjectCode = new String[] {"ce", "ec","ee", "me", "cs", "it", "ag", "ar", "bm","bt", "ch", "cy", "ey", "gg", "in", "ma", "mn","mt","pe","ph","pi","st","tf","xe_a","xe_b","xe_c","xe_d","xe_e","xe_f","xe_g","xl_p","xl_q","xl_r","xl_s","xl_t","xe_u" };
+    String []medicalSubjectCode = new String[] {"obst","ortho","neuro","cardio","endo","gynae","paediatric","psychi","dermato","radio","pathology","medical_type1_others","paedia","psurgery","cardio_thoracic","uro","cardiac","cosmestic_sur","ent","ophtha","gynaecology","obste","orthopaedics","medical_type2_others"};
+    String []bScSubjectCode = new String[] {"bio","bioc","botany","chem","evs","math","phy","zoo","bsc_others"};
+    String []baComSubjectCode = new String[] {"acco","cost","stat","manage","human","comp","economy","eng","law","marketin","finance","ba_comm_others"};
+    String []baSubjectCode = new String[] {"hist","eco","geo","politsc", "Socio","philo","human_rt","inform","ba_others"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,130 +72,48 @@ public class SelectGradExam_Activity extends AppCompatActivity {
                 }
             }
 
-
-//            if (data.equals("ce")) {
-//                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-//                intent.putExtra("course", "ce");
-//                startActivity(intent);
-//                finish();
-//            } else if (data.equals("ec")) {
-//
-//                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-//                intent.putExtra("course", "ec");
-//                startActivity(intent);
-//                finish();
-//            } else if (data.equals("ee")) {
-//
-//                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-//                intent.putExtra("course", "ee");
-//                startActivity(intent);
-//                finish();
-//
-//            } else if (data.equals("me")) {
-//                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-//                intent.putExtra("course", "me");
-//                startActivity(intent);
-//                finish();
-//
-//            } else if (data.equals("cs")) {
-//                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-//                intent.putExtra("course", "cs");
-//                startActivity(intent);
-//                finish();
-//
-//            } else if (data.equals("it")) {
-//                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-//                intent.putExtra("course", "it");
-//                startActivity(intent);
-//                finish();
-//
-//            }
-//
-//            //Medical Type - 1
-             if (data.equals("obst")) {
-
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "obst");
-                startActivity(intent);
-                finish();
-            } else if (data.equals("neur")) {
-
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "neur");
-                startActivity(intent);
-                finish();
-
-            } else if (data.equals("endo")) {
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "endo");
-                startActivity(intent);
-                finish();
-
-            } else if (data.equals("paediatric")) {
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "paediatric");
-                startActivity(intent);
-                finish();
-
-            }
-            else if (data.equals("dermato")) {
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "dermato");
-                startActivity(intent);
-                finish();
-
-            } else if (data.equals("pathology")) {
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "pathology");
-                startActivity(intent);
-                finish();
-
-            } else if (data.equals("orthopaedics")) {
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "orthopaedics");
-                startActivity(intent);
-                finish();
-
-            }
-            else if (data.equals("cardio")) {
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "cardio");
-                startActivity(intent);
-                finish();
-
-            } else if (data.equals("gynaecology")) {
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "gynaecology");
-                startActivity(intent);
-                finish();
-
-            } else if (data.equals("psychi")) {
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "psychi");
-                startActivity(intent);
-                finish();
-
-            }
-            else if (data.equals("radio_Diagnosis")) {
-
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "radio_Diagnosis");
-                startActivity(intent);
-                finish();
-            } else if (data.equals("Others")) {
-
-                Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
-                intent.putExtra("course", "Others");
-                startActivity(intent);
-                finish();
-
+            for(int i=0; i<string_size-1;i++)
+            {
+                if(data.equals(medicalSubjectCode[i]))
+                {
+                    Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
+                    intent.putExtra("course", data);
+                    startActivity(intent);
+                    finish();
+                }
             }
 
-            else {
-                Intent intent = new Intent(SelectGradExam_Activity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+            for(int i=0; i<string_size-1;i++)
+            {
+                if(data.equals(bScSubjectCode[i]))
+                {
+                    Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
+                    intent.putExtra("course", data);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+            for(int i=0; i<string_size-1;i++)
+            {
+                if(data.equals(baSubjectCode[i]))
+                {
+                    Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
+                    intent.putExtra("course", data);
+                    startActivity(intent);
+                    finish();
+                }
+            }
 
+
+            for(int i=0; i<string_size-1;i++)
+            {
+                if(data.equals(baComSubjectCode[i]))
+                {
+                    Intent intent = new Intent(SelectGradExam_Activity.this, HigherExamDetails_Activity.class);
+                    intent.putExtra("course", data);
+                    startActivity(intent);
+                    finish();
+                }
             }
         }
     }
