@@ -265,6 +265,19 @@ public class SelectGradExam_Activity extends AppCompatActivity {
             }
         });
 
+
+        findViewById(R.id.ortho).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "ortho");
+                subCode = "obst";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         findViewById(R.id.neur).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -383,8 +396,8 @@ public class SelectGradExam_Activity extends AppCompatActivity {
         findViewById(R.id.radio).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Paper.book().write(Save1stPage.higherExamId, "radio_Diagnosis");
-                subCode = "radio_Diagnosis";
+                Paper.book().write(Save1stPage.higherExamId, "radio");
+                subCode = "radio";
                 Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
                 intent.putExtra("course", subCode);
                 startActivity(intent);
@@ -396,8 +409,8 @@ public class SelectGradExam_Activity extends AppCompatActivity {
         findViewById(R.id.medical_type1_others).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Paper.book().write(Save1stPage.higherExamId, "Others");
-                subCode = "Others";
+                Paper.book().write(Save1stPage.higherExamId, "medical_type1_others");
+                subCode = "medical_type1_others";
                 Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
                 intent.putExtra("course", subCode);
                 startActivity(intent);
@@ -407,8 +420,162 @@ public class SelectGradExam_Activity extends AppCompatActivity {
 
 
 
+        findViewById(R.id.paedia).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "paedia");
+                subCode = "paedia";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
+
+        findViewById(R.id.psurgery).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "psurgery");
+                subCode = "psurgery";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.cardio_thoracic).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "cardio_thoracic");
+                subCode = "cardio_thoracic";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.uro).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "uro");
+                subCode = "uro";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.cardiac).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "cardiac");
+                subCode = "cardiac";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.cosmestic_sur).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "cosmestic_sur");
+                subCode = "cosmestic_sur";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.ent).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "ent");
+                subCode = "ent";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.ophtha).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "ophtha");
+                subCode = "ophtha";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+
+        findViewById(R.id.gynaecology).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "gynaecology");
+                subCode = "gynaecology";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.obste).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "obste");
+                subCode = "uro";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.orthopaedics).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "orthopaedics");
+                subCode = "orthopaedics";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        findViewById(R.id.medical_exam_type2_layout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Paper.book().write(Save1stPage.higherExamId, "medical_exam_type2_layout");
+                subCode = "medical_exam_type2_layout";
+                Intent intent = new Intent(getApplicationContext(), HigherExamDetails_Activity.class);
+                intent.putExtra("course", subCode);
+                startActivity(intent);
+                finish();
+            }
+        });
 
     }
 

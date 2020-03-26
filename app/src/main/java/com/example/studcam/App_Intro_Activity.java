@@ -61,7 +61,6 @@ public class App_Intro_Activity extends AppCompatActivity {
         mList.add(new ScreenItem(R.drawable.undraw_moments_0y20, "title 3", "Description 3"));
         mList.add(new ScreenItem(R.drawable.undraw_podcast_q6p7, "title 4", "Description 4"));
 
-
         screenPager = findViewById(R.id.view_pager);
         introViewPagerAdapter = new IntroViewPagerAdapter(this,mList);
         screenPager.setAdapter(introViewPagerAdapter);

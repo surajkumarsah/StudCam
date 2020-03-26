@@ -54,6 +54,9 @@
             android:text="Submit"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
+            android:background="@drawable/round_bg1"
+            android:padding="10dp"
+            android:textColor="@color/white"
             />
 
 
@@ -64,6 +67,9 @@
                 android:text="View Problem"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center"
+                android:background="@drawable/round_bg1"
+                android:textColor="@color/white"
+                android:padding="10dp"
                 />
 
         </LinearLayout>
